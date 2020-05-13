@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
   <!-- Basic Page Needs
@@ -27,17 +28,21 @@
   <link rel="icon" type="image/png" href="images/favicon.png">
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-166545168-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-166545168-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'UA-166545168-1');
-</script>
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-166545168-1');
+  </script>
 
 
 </head>
+
 <body>
 
   <!-- Primary Page Layout
@@ -51,13 +56,26 @@
           </a>
         </h1>
         <h4>A learning loop for learning</h4>
-        <p>Formed around technical experimentation and innovation in education, Learning Loop is the multi-year CI/CD effort to incrementally (but consistently) achieve higher student–knowledge fit in a world where there is too much to know or learn.</p> <p>We're building rapid prototypes for small groups of students (100-500 students).</p>
-        <!-- email sina.meraji@gmail.com if you're interested to know more. -->
+        <p>Formed around technical experimentation and innovation in education, Learning Loop is a multi-year
+          effort to incrementally (but consistently) achieve higher student–knowledge fit in a world where there is too
+          much to know or learn. Currently testing several prototypes on small groups of students (100-500).</p>
+
+        <!-- The above form looks like this -->
+        <form name="contact" netlify>
+          <div class="row">
+            <div class="six columns">
+              <label>Stay in the loop <input class="u-full-width" type="email" name="email" /></label>
+            </div>
+          </div>
+          <input class="button-primary" type="submit" value="Submit">
+        </form>  
+
       </div>
     </div>
   </div>
 
-<!-- End Document
+  <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>
+
 </html>
