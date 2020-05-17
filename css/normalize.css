@@ -425,3 +425,37 @@ td,
 th {
   padding: 0;
 }
+
+.team_img {
+  filter: grayscale(100%);
+  border-radius: 5px;
+}
+.team{
+  background: #ff5297;
+  height: 500px;
+  border-radius: 5px;
+  color: #fff;
+  margin-bottom: 5%;
+  /* -webkit-box-shadow: 10px 14px 20px -7px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 14px 20px -7px rgba(0,0,0,0.75);
+box-shadow: 10px 14px 20px -7px rgba(0,0,0,0.75); */
+}
+.team p{
+  padding: 0 15px 0 15px;
+}
+.team h3{
+  padding-left: 15px;
+  margin-bottom:0;
+  font-weight: 00;
+}
+
+
+ul#social li {
+  padding: 0 15px 0 15px;
+  display:inline;
+}
+
+ul#social li a {
+  color:#000;
+}
+
