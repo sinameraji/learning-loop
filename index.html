@@ -40,27 +40,8 @@
     gtag('config', 'UA-166545168-1');
   </script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script>
-    function postContactToGoogle() {
-      var email = $('#email').val();
-      $.ajax({
-        url: "https://docs.google.com/forms/d/e/1FAIpQLSdWHcWat4whxS7iul_WihHnuTyxPVfJbisVr6xmTioWN_QzWw/formResponse",
-        data: {
-          "entry.1354418047": email
-        },
-        type: "POST",
-        dataType: "xml",
-        statusCode: {
-          0: function () {
-            window.location.replace("team.html");
-          },
-          200: function () {
-            window.location.replace("team.html");
-          }
-        }
-      });
-    }
-  </script>
+  <script src="/js/jquery.serialize-object.min.js"></script>
+
 
 </head>
 
@@ -82,17 +63,35 @@
           much to know or learn.</p>
         <p><a href="/team">Team</a></p>
 
-        <!-- The above form looks like this -->
-        <form>
+        <form id="test-form">
           <div class="row">
             <div class="six columns">
-              <label>Stay in the loop <input class="u-full-width" type="email" name="email" id="email" /></label>
+              <label>Stay in the loop
+                <input type="email" name="email" class="u-full-width" /></label>
             </div>
           </div>
-          <input class="button-primary" type="submit" onclick="postContactToGoogle()" value="Submit">
+
+          <button class="button-primary" type="submit" id="submit-form">Submit</button>
+
         </form>
 
 
+        <script>
+          var $form = $('form#test-form'),
+            url = 'https://script.google.com/macros/s/AKfycbwFykwSHbUH_pVXrdyHS3nAcdHYHWwPipixg1JRXg/exec'
+
+          $('#submit-form').on('click', function (e) {
+            e.preventDefault();
+            var jqxhr = $.ajax({
+              url: url,
+              method: "GET",
+              dataType: "json",
+              data: $form.serializeObject()
+            }).success(
+              console.log($form.serializeObject())
+            );
+          })
+        </script>
       </div>
     </div>
   </div>
