@@ -39,7 +39,28 @@
 
     gtag('config', 'UA-166545168-1');
   </script>
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script>
+    function postContactToGoogle() {
+      var email = $('#email').val();
+      $.ajax({
+        url: "https://docs.google.com/forms/d/e/1FAIpQLSdWHcWat4whxS7iul_WihHnuTyxPVfJbisVr6xmTioWN_QzWw/formResponse",
+        data: {
+          "entry.1354418047": email
+        },
+        type: "POST",
+        dataType: "xml",
+        statusCode: {
+          0: function () {
+            window.location.replace("team.html");
+          },
+          200: function () {
+            window.location.replace("team.html");
+          }
+        }
+      });
+    }
+  </script>
 
 </head>
 
@@ -59,17 +80,18 @@
         <p>Formed around technical experimentation and innovation in education, Learning Loop is a multi-year
           effort to incrementally (but consistently) achieve higher student–knowledge fit in a world where there is too
           much to know or learn.</p>
-          <p><a href="/team">Team</a></p>
+        <p><a href="/team">Team</a></p>
 
         <!-- The above form looks like this -->
-        <form name="contact">
+        <form>
           <div class="row">
             <div class="six columns">
-              <label>Stay in the loop <input class="u-full-width" type="email" name="email" /></label>
+              <label>Stay in the loop <input class="u-full-width" type="email" name="email" id="email" /></label>
             </div>
           </div>
-          <input class="button-primary" type="submit" value="Submit">
-        </form>  
+          <input class="button-primary" type="submit" onclick="postContactToGoogle()" value="Submit">
+        </form>
+
 
       </div>
     </div>
