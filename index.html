@@ -39,10 +39,6 @@
 
     gtag('config', 'UA-166545168-1');
   </script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script src="/js/jquery.serialize-object.min.js"></script>
-
-
 </head>
 
 <body>
@@ -76,22 +72,7 @@
         </form>
 
 
-        <script>
-          var $form = $('form#test-form'),
-            url = 'https://script.google.com/macros/s/AKfycbwFykwSHbUH_pVXrdyHS3nAcdHYHWwPipixg1JRXg/exec'
-
-          $('#submit-form').on('click', function (e) {
-            e.preventDefault();
-            var jqxhr = $.ajax({
-              url: url,
-              method: "GET",
-              dataType: "json",
-              data: $form.serializeObject()
-            }).success(
-              console.log($form.serializeObject())
-            );
-          })
-        </script>
+        
       </div>
     </div>
   </div>
