@@ -12,18 +12,30 @@
   }
   .section-heading,
   .section-description {
+    font-size: 4rem;
     margin-bottom: 1.2rem;
   }
   
   /* Hero
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  .cs {
+    background-color: red;
+    color: white;
+    font-size: 3rem;
+    border-radius: 5px;
+  }
+
+  .school {
+    border-radius: 5%;
+    width: 100%;
+  }
   .phones {
     position: relative;
   }
   .phone {
     position: relative;
     max-width: 80%;
-    margin: 3rem auto -12rem;
+    /* margin: 3rem auto -12rem; */
   }
   .phone + .phone {
     display: none;
