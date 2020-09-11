@@ -41,28 +41,6 @@
     gtag('config', 'UA-166545168-1');
   </script>
 
-  <!-- <script>
-    function postContactToGoogle() {
-      var email = $('#email').val();
-      $.ajax({
-        url: "https://docs.google.com/forms/d/e/1FAIpQLSdjO21Rm17rg_4srobNycemome_pYYQBB0pDG7lAEeClQ3geg/formResponse?",
-        data: {
-          "entry.235691232": email
-        },
-        type: "POST",
-        dataType: "xml",
-        statusCode: {
-          0: function () {
-            window.location.replace("thankyou.html");
-          },
-          200: function () {
-            window.location.replace("thankyou.html");
-          }
-        }
-      });
-    }
-  </script> -->
-
 </head>
 
 <body>
@@ -76,7 +54,7 @@
         <h5>Train online to develop original thoughts about individual life, society and politics. 3 days every month,
           free first 2 months, cancel anytime.</h5>
 
-          <form id="sample-form" onsubmit="
+          <form id="form-top" onsubmit="
           var form_url = 'https://docs.google.com/forms/d/e/1FAIpQLSdjO21Rm17rg_4srobNycemome_pYYQBB0pDG7lAEeClQ3geg/formResponse?';
           form_url+= 'entry.235691232=' + document.getElementById('email').value;
           window.open(form_url, '_blank');
@@ -126,7 +104,7 @@
       <p class="section-description">Apply now and we'll reach out to you via email to tell you more and learn more
         about your goals.</p>
       <!-- <form name="contact" > -->
-          <form id="sample-form" onsubmit="
+          <form id="form-btm" onsubmit="
           var form_url = 'https://docs.google.com/forms/d/e/1FAIpQLSdjO21Rm17rg_4srobNycemome_pYYQBB0pDG7lAEeClQ3geg/formResponse?';
           form_url+= 'entry.235691232=' + document.getElementById('email_btm').value;
           window.open(form_url, '_blank');
