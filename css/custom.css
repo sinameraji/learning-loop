@@ -1,3 +1,10 @@
+.stay {
+    background-color: mediumseagreen;
+    color: white;
+    border-radius: 5px;
+    padding: 2px;
+}
+
 /* Shared
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .button {
@@ -32,14 +39,14 @@
   /* Values
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
   .values {
-    background-image: url('../images/values-bg.jpg');
+    background-image: url('../images/bg-persian.jpg');
     background-size: cover;
     color: #fff;
     padding-bottom: 5rem;
   }
   .value-multiplier {
     margin-bottom: .5rem;
-    color: #11DFC7;
+    color: #fff;
   }
   .value-heading {
     margin-bottom: .3rem;
