@@ -1,4 +1,4 @@
-.stay {
+.focus {
     background-color: mediumseagreen;
     color: white;
     border-radius: 5px;
@@ -39,7 +39,7 @@
   /* Values
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
   .values {
-    background-image: url('../images/bg-persian.jpg');
+    background-image: url('../images/values-bg.jpg');
     background-size: cover;
     color: #fff;
     padding-bottom: 5rem;
